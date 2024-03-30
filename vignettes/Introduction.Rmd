@@ -1,0 +1,65 @@
+---
+title: "Get the vector map of China"
+author: "Panfeng Zhang"
+date: "`r Sys.Date()`"
+vignette: >
+  %\VignetteIndexEntry{cnmap}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+### Installation
+
+Install the latest CRAN release via command:
+```{r,eval=FALSE}
+install.packages("cnmap")
+```
+
+### Usage 1
+```{r}
+library(ggplot2)
+library(sf)
+library(cnmap)
+
+map1 <- getMap(name = "中国")
+ggplot(data = map1) + geom_sf()
+```
+
+### Usage 2
+```{r}
+map2 <- getMap(code = "100000", subRegion = TRUE) 
+ggplot(data = map2) + geom_sf()
+```
+
+### Usage 3
+```{r}
+map3 <- getMap(name = "吉林省", subRegion = TRUE)
+ggplot(data = map3) + geom_sf()
+```
+
+### Usage 4
+```{r}
+map4 <- getMap(name = "长春市", subRegion = TRUE)
+ggplot(data = map4) + geom_sf()
+```
+
+### Usage 5
+```{r}
+map5 <- getMap(code = "220100", subRegion = TRUE) 
+ggplot(data = map5) + geom_sf()
+```
+
+map4 is equivalent to map5.
+
+### Usage 6
+```{r}
+map6 <- getMap(name = "香港特别行政区", subRegion = TRUE)
+ggplot(data = map6) + geom_sf()
+```
