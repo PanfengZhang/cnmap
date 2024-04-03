@@ -2,12 +2,11 @@
 % Please edit documentation in R/getMap.R
 \name{getMap}
 \alias{getMap}
-\title{Obtain a vector map of China's administrative divisions (at or above
-the county level) based on the name or code of divisions}
+\title{China Map Data from AutoNavi Map}
 \usage{
 getMap(
   name = NULL,
-  code = 1e+05,
+  code = "100000",
   subRegion = FALSE,
   returnClass = c("sf", "sv")
 )
@@ -16,12 +15,12 @@ getMap(
 \item{name}{character. An name of the China's administrative division at the
 county level or above. The name of administrative division needs to be consistent
 with the website provided by the Ministry of Civil Affairs of the People's
-Republic of China in 2022 (https://www.mca.gov.cn/mzsj/xzqh/2022/202201xzqh.html).}
+Republic of China in 2022 (\url{https://www.mca.gov.cn/mzsj/xzqh/2022/202201xzqh.html}).}
 
 \item{code}{character. A code of the China's administrative division at the
 county level or above. The code of administrative division needs to be consistent
 with the website provided by the Ministry of Civil Affairs of the People's
-Republic of China in 2022 (https://www.mca.gov.cn/mzsj/xzqh/2022/202201xzqh.html).}
+Republic of China in 2022 (\url{https://www.mca.gov.cn/mzsj/xzqh/2022/202201xzqh.html}).}
 
 \item{subRegion}{A logical evaluating to TRUE or FALSE indicating whether the
 sub regions of the administrative region should be included. The default is
@@ -37,22 +36,17 @@ a 'sf' or a 'SpatVector' object.
 \description{
 According to the code and name of the administrative division at the county
 level and above provided by the Ministry of Civil Affairs of the People's
-Republic of China in 2022 (https://www.mca.gov.cn/mzsj/xzqh/2022/202201xzqh.html),
-get the map vector file online from amap (http://datav.aliyun.com/portal/school/atlas/area_selector).
+Republic of China in 2022 (\url{https://www.mca.gov.cn/mzsj/xzqh/2022/202201xzqh.html}),
+get the map vector file online from the website of AutoNavi Map (\url{http://datav.aliyun.com/portal/school/atlas/area_selector}).
 }
 \examples{
 library(cnmap)
 
-map1 <- getMap(name = "中国")
+map1 <- getMap(code = "110000") # get the map data of Beijing City
 
-map2 <- getMap(code = "100000") # map1 is equivalent to map2.
+map2 <- getMap(code = "100000") # get the map data of China.
 
-map3 <- getMap(name = "吉林省", subRegion = TRUE)
-
-map4 <- getMap(name = "长春市", subRegion = TRUE)
-
-map5 <- getMap(code = "220100", subRegion = TRUE) # # map4 is equivalent to map5.
-
-map6 <- getMap(name = "香港特别行政区", subRegion = TRUE)
+# get the map data of Beijing City, and sub regions is also included.
+map1 <- getMap(code = "110000", subRegion = TRUE)
 
 }

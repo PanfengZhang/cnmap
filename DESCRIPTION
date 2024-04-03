@@ -1,5 +1,5 @@
 Package: cnmap
-Title: Obtain a vector map of China's administrative divisions (at or above the county level) based on the name strings or the code of divisions
+Title: China Map Data from AutoNavi Map
 Version: 0.1.0
 Authors@R: 
     c(person(given = "Panfeng", 
@@ -8,7 +8,7 @@ Authors@R:
              email = "zhangpanfeng@jlnu.edu.cn", 
              comment = c(ORCID = "0000-0001-6084-9231")))
 Maintainer: Panfeng Zhang <zhangpanfeng@jlnu.edu.cn>
-Description: According to the code or the name of the administrative division at the county level and above provided by the Ministry of Civil Affairs of the People's Republic of China in 2022 (https://www.mca.gov.cn/mzsj/xzqh/2022/202201xzqh.html), get the map file of online from amap (http://datav.aliyun.com/portal/school/atlas/area_selector).
+Description: According to the code or the name of the administrative division at the county level and above provided by the Ministry of Civil Affairs of the People's Republic of China in 2022 (<https://www.mca.gov.cn/mzsj/xzqh/2022/202201xzqh.html>), get the map file online from the website of AutoNavi Map (<http://datav.aliyun.com/portal/school/atlas/area_selector>).
 URL: https://github.com/PanfengZhang/cnmap
 BugReports: https://github.com/PanfengZhang/cnmap/issues
 Depends: R (>= 4.3.0)
