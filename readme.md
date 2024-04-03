@@ -54,7 +54,4 @@ map4 is equivalent to map5.
     ggplot(data = map6) + geom_sf()
 
 ![](readme_files/figure-markdown_strict/unnamed-chunk-7-1.png)
-# cnmap
-"# cnmap" 
-#cnmap
-# cnmap
+
